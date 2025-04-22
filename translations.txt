@@ -1,0 +1,11 @@
+Original Text: hello
+
+English (en): hello
+Kannada (kn): ನಮಸ್ಕಾರ
+Hindi (hi): नमस्ते
+Telugu (te): హలో
+Tamil (ta): வணக்கம்
+Ukrainian (uk): привіт
+Arabic (ar): مرحبًا
+Russian (ru): привет
+Japanese (ja): こんにちは

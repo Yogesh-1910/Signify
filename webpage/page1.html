@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Sign Language</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Very dark navy/black */
+            color: #b0b0c0; /* Light gray for secondary text */
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Full height of the viewport */
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #141428; /* Slightly lighter dark blue */
+    color: #ffffff; /* White for text */
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center;
+    height: 150px; /* Set a fixed height for the header */
+    margin: 0; /* Remove any margin around the header */
+    padding: 0; /* Remove padding below the logo */
+}
+
+.logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the logo */
+}
+
+.logo-container img {
+    width: 500px; /* Adjust the size of the logo */
+    height: 150px;
+    border-radius: 0%; /* Optional: Make the logo circular */
+    margin: 0; /* Remove any margin below the logo */
+    padding: 0; /* Remove any padding below the logo */
+}
+
+.header-link {
+    position: absolute; /* Position the button relative to the header */
+    right: 20px; /* Align to the right corner */
+    top: 10%; /* Vertically center the button */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering*/
+}
+
+.header-link a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-size: 1em; /* Slightly smaller font size */
+    padding: 6px 10px; /* Smaller padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #5b7eff; /* Blue background for the button */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.header-link a:hover {
+    background-color: #627eea; /* Darker blue on hover */
+}
+        /* Main Container */
+        .container {
+            flex: 1; /* Take up the remaining space */
+            display: flex;
+            flex-direction: column;
+            background-color: #41415f; /* Slightly lighter dark blue */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Sections */
+        .text-input-section,
+        .images-section,
+        .video-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #141428; /* Slightly lighter dark blue */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Textarea styling */
+        .text-input-section textarea {
+            width: 80%;
+            max-width: 500px;
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #5b7eff; /* Light blue for borders */
+            border-radius: 5px;
+            resize: vertical;
+            background-color: #0e0e17; /* Dark background */
+            color: #ffffff; /* White text */
+        }
+
+        /* Button styling */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            color: #ffffff; /* White text */
+        }
+
+        button.primary {
+            background-color: #5b7eff; /* Light blue for action buttons */
+        }
+
+        /* Heading styles */
+        .images-section h2,
+        .video-section h2 {
+            font-size: 1.5em;
+            color: #ffffff; /* White text */
+            margin-bottom: 20px;
+        }
+
+        /* Output areas */
+        .image-output,
+        .video-output {
+            font-size: 1.2em;
+            color: #000000; /* Light gray for text */
+            text-align: center;
+            min-height: 100px;
+            width: 90%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #0e0e17; /* Dark background */
+        }
+
+        /* Custom style for sign language images */
+        .sign-container {
+            display: inline-block;
+            text-align: center;
+            margin: 10px;
+            background-color: #ffffff; /* Slightly lighter than main background */
+            padding: 10px;
+            color: #000000; /* Black text for labels */
+            border-radius: 8px;
+        }
+
+        .sign-container img {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #5b7eff; /* Light blue border */
+            border-radius: 8px;
+        }
+
+        .sign-container .sign-label {
+            margin-top: 5px;
+            font-size: 16px;
+            color: #000000; /* Black text */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="Signify.png" alt="Logo" class="logo">
+        </div>
+        <div class="header-link">
+            <a href="index.html" class="button-link">Camera Detection System</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="text-input-section">
+            <textarea id="text-input" placeholder="Enter text to convert to sign language"></textarea>
+            <button class="primary" onclick="convertText()">Convert</button>
+        </section>
+
+        <section class="images-section">
+            <h2>Sign Language Images</h2>
+            <div class="image-output" id="image-output">Images will appear here</div>
+        </section>
+
+        <section class="video-section">
+            <h2>Video Representation of the Sign Language</h2>
+            <div class="video-output" id="video-output">Video will appear here</div>
+        </section>
+    </div>
+
+    <script>
+        // Function to convert text to sign language
+        function convertText() {
+            const inputText = document.getElementById('text-input').value.trim();
+            const imageOutput = document.getElementById('image-output');
+            const videoOutput = document.getElementById('video-output');
+
+            // Clear previous outputs
+            imageOutput.innerHTML = '';
+            videoOutput.textContent = '';
+
+            if (inputText === '') {
+                imageOutput.textContent = 'Please enter some text.';
+                videoOutput.textContent = 'Please enter some text.';
+                return;
+            }
+
+            // Display images and corresponding alphabets for each character in the input text
+            for (const char of inputText) {
+                if (char === ' ') {
+                    // Add a space between words
+                    const space = document.createElement('div');
+                    space.style.width = '20px';
+                    space.style.display = 'inline-block';
+                    imageOutput.appendChild(space);
+                } else {
+                    // Create a container for the image and label with our custom class
+                    const container = document.createElement('div');
+                    container.className = 'sign-container';
+
+                    // Create an image element for each character
+                    const img = document.createElement('img');
+                    img.src = `sign_samples/${char.toLowerCase()}.png`; // Assuming images are named as 'a.png', 'b.png', etc.
+                    img.alt = char;
+
+                    // Create a label for the character with our custom class
+                    const label = document.createElement('div');
+                    label.className = 'sign-label';
+                    label.textContent = char.toUpperCase(); // Display the character in uppercase
+
+                    // Append the image and label to the container
+                    container.appendChild(img);
+                    container.appendChild(label);
+
+                    // Append the container to the output
+                    imageOutput.appendChild(container);
+                }
+            }
+
+            // Display a message in the video output section
+            videoOutput.textContent = `Displaying sign language video for: ${inputText}`;
+        }
+
+        // Add event listener for the Enter key
+        document.getElementById('text-input').addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent default behavior of Enter key
+                convertText(); // Call the convertText function
+            }
+        });
+    </script>
+</body>
+
+</html>

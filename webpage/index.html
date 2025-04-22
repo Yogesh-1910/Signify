@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Camera Detection System</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="Signify.png" alt="Logo" class="logo">
+        </div>
+        <div class="header-link">
+            <a href="page1.html" class="button-link">Text to Sign Language</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Left Column: Buttons -->
+            <div class="left-column">
+                <div class="controls">
+                    <div class="control-group">
+                        <h2>Camera Controls</h2>
+                        <div class="button-group">
+                            <button class="btn primary" id="start-camera">Start Camera</button>
+                            <button class="btn danger" id="stop-camera">Stop Camera</button>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <h2>Detection Controls</h2>
+                        <div class="button-group">
+                            <button class="btn success" id="start-detection">Start Detection</button>
+                            <button class="btn warning" id="stop-detection">Stop Detection</button>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <h2>Output Controls</h2>
+                        <div class="button-group">
+                            <button class="btn info" id="save-text">Save Text</button>
+                            <button class="btn secondary" id="convert-to-audio">Convert to Audio</button>
+                            <button class="btn danger" id="clear-text">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column: Camera Feed -->
+            <div class="right-column">
+                <div class="camera-container">
+                    <div class="video-wrapper">
+                        <img id="video-feed" src="http://127.0.0.1:8000/video_feed" width="640" height="480" alt="check your camera">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Section: Saved Text and Audio -->
+        <div class="bottom-section">
+            <div class="control-group">
+                <h2>Saved Letters</h2>
+                <div id="savedLetters" class="saved-letters">
+                    <!-- Saved letters will be displayed here -->
+                </div>
+            </div>
+            
+            <div class="control-group audio-controls">
+                <h2>Audio Controls</h2>
+                <div class="audio-container">
+                    <select id="language-select" class="audio-dropdown">
+                        <option value="en">English</option>
+                        <option value="kn">Kannada</option>
+                        <option value="hi">Hindi</option>
+                        <option value="te">Telugu</option>
+                        <option value="ta">Tamil</option>
+                        <option value="uk">Ukrainian</option>
+                        <option value="ar">Arabic</option>
+                        <option value="ru">Russian</option>
+                        <option value="ja">Japanese</option>
+                    </select>
+                    <audio id="audioPlayer" controls>
+                        <source id="audioSource" src="http://127.0.0.1:8000/get-audio/en" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Camera Detection System. All rights reserved. Team Enigma&trade;</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

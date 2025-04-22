@@ -1,0 +1,224 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Very dark navy/black */
+    color: #b0b0c0; /* Light gray for secondary text */
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height of the viewport */
+}
+
+.container {
+    flex: 1; /* Take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    background-color: #41415f; /* Slightly lighter dark blue */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff; /* White for headings */
+}
+
+/* Main Content Layout */
+.main-content {
+    flex: 1; /* Take up available space */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.left-column {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.right-column {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.camera-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141428; /* Slightly lighter dark blue */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.video-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Bottom Section */
+.bottom-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.saved-letters {
+    padding: 10px;
+    background-color: #141428; /* Slightly lighter dark blue */
+    color: #ffffff; /* White for text */
+    min-height: 50px;
+    border-radius: 10px;
+}
+
+.audio-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.audio-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.audio-dropdown {
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #5b7eff; /* Light blue for action buttons */
+    border-radius: 5px;
+    background-color: #ffffff; /* White background */
+    color: #0e0e17; /* Dark text for contrast */
+    width: 350px;
+    height: 50px;
+}
+
+audio {
+    width: 350px;
+}
+
+/* Header Styles */
+.header {
+    background-color: #141428; /* Slightly lighter dark blue */
+    color: #ffffff; /* White for text */
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center;
+    height: 150px; /* Set a fixed height for the header */
+    margin: 0; /* Remove any margin around the header */
+    padding: 0; /* Remove padding below the logo */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 500px; /* Adjust the size of the logo */
+    height: 150px;
+    border-radius: 0%; /* Optional: Make the logo circular */
+    margin: 0; /* Remove any margin below the logo */
+    padding: 0; /* Remove any padding below the logo */
+}
+
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Header Link Button */
+.header-link {
+    position: absolute; /* Position the button relative to the header */
+    right: 20px; /* Align to the right corner */
+    top: 10%; /* Vertically center the button */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+}
+
+.header-link a {
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2em; /* Adjust font size */
+    padding: 8px 12px; /* Add padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Blue background for the button */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.header-link a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #141428; /* Slightly lighter dark blue */
+    color: #b0b0c0; /* Light gray for secondary text */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Controls and Buttons */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.control-group {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #141428; /* Slightly lighter dark blue */
+    color: #ffffff; /* White for text */
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff; /* White text */
+}
+
+button.primary {
+    background-color: #5b7eff; /* Light blue for action buttons */
+}
+
+button.danger {
+    background-color: #dc3545; /* Red for danger actions */
+}
+
+button.success {
+    background-color: #32c77a; /* Green for positive actions */
+}
+
+button.warning {
+    background-color: #e6bb31; /* Yellow/orange for pending status */
+}
+
+button.info {
+    background-color: #627eea; /* Ethereum icon purple */
+}
+
+button.secondary {
+    background-color: #6c757d; /* Neutral gray */
+}
