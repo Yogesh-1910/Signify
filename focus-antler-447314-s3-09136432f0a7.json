@@ -1,13 +1,13 @@
 {
   "type": "service_account",
-  "project_id": "focus-antler-447314-s3",
-  "private_key_id": "09136432f0a79128c012154a1a3e1f095b8c27e6",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC0yVqeDnLSvy3p\nIoAEBKISPE79KDMPZ8yeTzZIBFdfywZYO2oJEQv5WBD8c2MQH4cs5Lrw6zeEVUnW\nt8SL4O5OQ8wK7MNcQIMxL6Rf1r/oZ/Z7RBbwwy+l3kYFna/CgbjAhHfaKXhw5K+r\nBJGcs6E3efrZq0vKbHfIZ9nZnNLfE0fc0EupYK8L7EyXZMC7iiPCHMNsLTNyFZ8J\nebggRVZ7Es7rT6UA8p0d8d/oCOXaEuLWg4YcJ8rrTRMlvYcVfiaRDcMGgN9PN8c4\n2QOBHrBQlOYInaAQOMWhSJrFplRIKI0Tu6CHoMiJ0dUle4ESwFOPwRoHYtteY7ix\nsbWQaV5fAgMBAAECggEAEuxSmmG2c3MZxKHdAXlUrOZNeaKCubWVOEA1VSjIgS6N\n8vVWc4LVHIaIfKGSoxuRuXQVpzsPsWqAqJjNWhDeENN4NkUzFmMVowkywj9cZgtf\nxDuhJRa2fuelr60iOmX7/IFrztTxa5ZcVuEgYWUiAQhju/NPTcMNxKyDeTY456rU\nDkAKcyZY747yyCn/bo1tSZrFrD8UfwXRFrxJby6fwppbFzGtPbZHSHerxQZ9Zh3O\nvB/noSIWzDvZyI9Vr4WFo0Yh/i6mGFW/h1cNP40vMnsGYZu0ljitRY2GcJLnLhs6\ntfVceFTlC/73Yhkp4JeT1gW7G/w49eHhMq44Ct3S7QKBgQDiQp7gL/zW4mdpSBUM\nyO6CyRs/m57TIpy167hW+ZL/HDQYRn+SRjZN9+dSUuOlzCpLM975Ah/olKdh4JJT\nm4ZKUcIc0syeCVWdG3AMuZBrkIUhZCE38dY3Qqomu4Z+KqxLCBLXbpiYR8LGcDTj\nR1tlXZ+dtXs53RTx/x7nIbRPjQKBgQDMjJlmoMmXMaC3CIBJzIxSWOThkJOF+tWT\nMbgkm+TRJTuvjSe7IMIIFBLw38RZTXxWGzISpSvuKzvcuywZme4dPThuvajphMij\nLGWNYA+jD5RV41vG1H2IFdSI2OT5r43atyxfuKSSH8mOT4ywebSQo+6A3WCTmZiA\noSR757sEmwKBgGrCOorXubp+y4KOw3fr2zaUw6mouTEwdLcWCT3otuZunVoS8aDI\nRllVrq1WdRnHEvG3AO+HhBzO/4ecWg7fJGcu2qOVB31ONDpUNvOaHz3RzC9sOoxW\nLNiYOQbbluMzKWah4ZoLEi9QNORDD4FqKwLSQT09423zFi31TdSLP7QFAoGBAJYC\nuvGwE4fFhqcVHfiBgZtWxCzEudw1U/KKMRDwH4ReuQILFEtBP+tqxWVPxhD0Ka6A\nbV2NMsWNgW5k+negEyfwYPWeNEVl8zrv8V4YR/9/CnterU0JQzLNR7xAzNRssizn\nzyw4HsFnfIrYvkYiS5EUGHL7Z7t3locnJrmT/eznAoGAAsQgrgti1/HVs4uUncEr\ncVm50Cfwt9yenyeSCeWkV5GHzTxQlF+jMaGWoPRxRFlWJGuEreNdzx64TAnz3vLE\nd+Uur1lULCQUcvA2Wnr58reai1YAKy3fPDI02Qn3z7ALMUPnn6HLr2sI+uD3jcq9\nZztTN+4rcxJAl4U5/wiBo60=\n-----END PRIVATE KEY-----\n",
-  "client_email": "translation-api@focus-antler-447314-s3.iam.gserviceaccount.com",
-  "client_id": "117566515556744253388",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/translation-api%40focus-antler-447314-s3.iam.gserviceaccount.com",
+  "project_id": "#",
+  "private_key_id": "#",
+  "private_key": "-----BEGIN PRIVATE KEY-----\n # \n-----END PRIVATE KEY-----\n",
+  "client_email": "#",
+  "client_id": "#",
+  "auth_uri": "#",
+  "token_uri": "#",
+  "auth_provider_x509_cert_url": #",
+  "client_x509_cert_url": #",
   "universe_domain": "googleapis.com"
 }
